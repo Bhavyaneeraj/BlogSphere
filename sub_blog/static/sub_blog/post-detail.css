@@ -1,0 +1,197 @@
+#summary {
+    height: auto; 
+    border: 2px solid #333;
+    background-color: #4422da;
+    padding: 20px; 
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+#heading {
+    width: 400px;
+    font-size: 60px;
+    margin: 20px 0 10px;
+}
+
+#resource {
+    margin-left: auto;
+}
+
+.detail-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#by {
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 10px;
+}
+
+#information {
+    height: auto; 
+    border: 2px solid #333;
+    background-color: rgb(70, 63, 63);
+    padding: 20px; 
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    color: grey;
+}
+
+#simple_tags {
+    display: flex;
+    flex-direction: row;
+}
+
+#single_tag {
+    border-radius: 5%;
+    background-color: white;
+    margin-right: 2px;
+    color: black;
+}
+
+.comments {
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px; 
+    max-width: 600px; 
+    margin: 20px auto;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.comments form input,
+.comments form textarea {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 16px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.comments form input:focus,
+.comments form textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+.comments form button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.comments form button:hover {
+    background-color: #0056b3; 
+}
+
+.comments_1 {
+    background-color: rgb(70, 63, 63);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;
+}
+
+.comments_1 h3 {
+    font-family: 'Arial', sans-serif; 
+    color: #333; 
+    margin-bottom: 15px;
+}
+
+.comment {
+    background-color: #fff; 
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px; 
+    border-left: 4px solid #007bff; 
+    transition: background-color 0.3s ease; 
+}
+
+.comment p {
+    color: #555; 
+    margin: 0; 
+}
+
+.comment:hover {
+    background-color: #e9ecef; 
+}
+
+#read-more-comments {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+#read-more-comments:hover {
+    background-color: #0056b3; 
+}
+
+#all-comments {
+    margin-top: 15px; 
+}
+
+.comments {
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Reduced padding for height */
+    max-width: 400px; /* Set a max width for the section */
+    margin: 20px auto; /* Center the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 8px; /* Reduced space between elements */
+}
+
+.comments form input,
+.comments form textarea {
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Reduced padding for inputs */
+    font-size: 14px; /* Font size for inputs */
+    width: 100%; /* Make inputs take full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.comments form button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 8px 12px; /* Reduced padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    font-size: 14px; /* Font size for the button */
+}
+
+.comments form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'base.css'%}"/>
+    {% block link %}{% endblock %}
+</head>
+<body class="main-body">
+    <div id="upper-body">
+        <div id="main-div">
+            <div class="header-div">
+                <header class="nav-head">
+                    <a class="blog" href="{%url "starting_page"%}">BlogSphere</a>
+                    <form class='search' method='GET' action="{%url 'search'%}">
+                        <input type="text" name="query" placeholder='Search for the posts here'>
+                        <button type="submit">Search</button>
+                    </form>
+                    <a href="{% url "blog_form"%}" class='blog_form_tag'>Create Your Own Blog</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class='logout'>Logout</a>
+                    {% else %}
+                    <a href="{% url 'sign_up' %}" class='signup'>SignUp</a>/
+                    <a href="{% url 'login' %}" class='login'>Login</a>
+                    {% endif %}
+
+                    <a class="posts" href="{%url "posts"%}"> ALL POSTS</a>
+                </header>
+            </div>
+    </div>
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+
+    
+</body>
+</html>

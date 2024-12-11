@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Comment</title>
+    <link rel="stylesheet" href="{% static 'sub_blog/edit_comment.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Edit Comment</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  
+        <button type="submit">Update Comment</button>
+    </form>
+
+    <a href="{% url 'post_detail' comment.post_com.slug %}">Cancel</a>  
+</div>
+
+</body>
+</html>

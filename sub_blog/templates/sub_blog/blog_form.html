@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+{%load static%}
+
+
+
+{% block link %}
+<link rel="stylesheet" href="{%static 'sub_blog/blog_form.css'%}"/>
+{% endblock %}
+
+{%block content%}
+{% if user.is_authenticated %}
+    <div class='container'>
+        <form method="post" enctype="multipart/form-data">  
+            {% csrf_token %}  
+            {{ form.as_p }} 
+            <button type="submit">Submit</button>  
+        </form>
+    </div>
+{%else%}
+    <div id='logout_form'>
+    <p>Please login to create your own Blog</p>
+    <a href="{%url 'login'%}" class='login_link'>Login</a>
+    </div>
+{%endif%}
+{%endblock%}

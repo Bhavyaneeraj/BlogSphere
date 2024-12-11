@@ -1,0 +1,20 @@
+{%load static%}
+<div class="footer" style="background-color: #bac2e1;  padding: 15px; text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Welcome to our community-driven blog! Here, we explore fascinating topics across a variety of interests, where readers and writers alike can dive into insightful articles and share their thoughts. Join the conversation, expand your knowledge, and become a part of our growing community by leaving your comments or contributing your own stories.</p>
+            </div>
+            <div class="col-md-4-2">
+                <ul class='link_styles' style="list-style-type: none;">
+                    <li ><a href="#">Home</a></li>
+                    <li><a href="{%url "about_us"%}">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; {{ current_year }} Your Blog Name. All rights reserved.</p>
+    </div>
+</div>

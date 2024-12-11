@@ -1,0 +1,11 @@
+{%load static%}
+<a class="anc" {%if user.is_authenticated%}href="{%url "post-detail-page" i.slug%}"{%else%}href="{%url 'login'%}"{%endif%}>
+    <section class="visible-section">
+        <div class="info">
+            <img src="{{i.image.url}}" alt="mountain-image"/>
+            <h3>{{i.title}}</h3>
+            <h5>{{i.Author_details}}</h5>
+            <p>{{i.excert}}</p>
+        </div>
+    </section>
+</a>

@@ -1,0 +1,27 @@
+{%extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+All MY POSTS
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'sub_blog/allposts.css' %}" />
+{% endblock %}
+
+
+
+{% block content %}
+<div id="all">
+    <h2 id="heading">Collected post's</h2>
+    <ul>
+        {%for i in posts%}
+        <li>
+            {%include "sub_blog/includes/header.html"%}  
+        </li> 
+        {%endfor%}  
+    </ul>
+
+</div>
+{% endblock %}

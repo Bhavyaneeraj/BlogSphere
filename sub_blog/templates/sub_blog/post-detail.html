@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+POST-DETAIL
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'sub_blog/post-detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div id="summary">
+        <div>
+        <h2 id="heading">{{single_post.title}} DETAIL</h1>
+            <div id='simple_tags'>
+                {% for tag in single_post.tag.all %}
+                    <div id='single_tag'>{{ tag.simple_tag }}</div>{% if not forloop.last %}  {% endif %}
+                {% empty %}
+                    <p>No tags available.</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="resource">
+        <img class="detail-image" src="{{single_post.image.url}}"" alt="Post's image">
+        <p id="by">BY {{single_post.Author_details}} </p>
+        <p>{{single_post.date}}</p>
+        </div>
+    </div>
+    <div id="information">
+        <p>{{single_post.description}} </p>
+    </div>
+    <div class='comments_1'>
+        <h3>Comments</h3>
+        {% for comment in comments|slice:":3" %}
+            <div class="comment">
+                <p>{{ comment.comment }}</p>
+                <a href="{% url 'edit_comment' comment.id %}">Edit</a> 
+            </div>
+        {% endfor %}
+    
+        {% if comments|length > 3 %}
+            <button id="read-more-comments" onclick="toggleComments()">Read More Comments</button>
+        {% endif %}
+        
+        <div id="all-comments" style="display: none;">
+            {% for comment in comments|slice:"3:" %}
+                <div class="comment">
+                    <p>{{ comment.comment }}</p>
+                    <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <script>
+    function toggleComments() {
+        const allCommentsDiv = document.getElementById('all-comments');
+        const readMoreButton = document.getElementById('read-more-comments');
+    
+        if (allCommentsDiv.style.display === 'none') {
+            allCommentsDiv.style.display = 'block';
+            readMoreButton.innerText = 'Show Less Comments';
+        } else {
+            allCommentsDiv.style.display = 'none';
+            readMoreButton.innerText = 'Read More Comments';
+        }
+    }
+    </script>    
+    <div class='comments'>
+        <form method='POST'>
+            {% csrf_token %}  
+            {{ form}}  
+            {{ form.errors }}
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
+{% endblock %}
+
+

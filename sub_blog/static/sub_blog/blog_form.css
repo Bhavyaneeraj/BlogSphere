@@ -1,0 +1,194 @@
+/* Container for form */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus state for inputs */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="file"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #009688;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+/* Style the submit button */
+form button[type="submit"] {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+    background-color: #00796b;
+}
+
+/* Add some padding between form elements */
+form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Align the form elements inside a flex container */
+form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for error messages */
+form .errorlist {
+    color: red;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* Style the CSRF token */
+input[name="csrfmiddlewaretoken"] {
+    display: none;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content block */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login_link{
+    color:white;
+    text-decoration: none;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height:35px;
+}
+
+/* Style for the search input */
+.search input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search input[type="text"]:focus {
+    border-color: #0066cc;
+}
+
+/* Style for the search button */
+.search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #004080;
+}
+
+/* Center the logout form */
+#logout_form {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    text-align: center; /* Center text */
+    background-color: #BAC2E1; /* Light background */
+    border: 2px solid #ddd; /* Optional border */
+    padding: 20px; /* Add spacing around the content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 200px;
+}
+
+/* Styling for the paragraph */
+#logout_form p {
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space between text and link */
+}
+
+/* Styling for the login link */
+#logout_form .login_link {
+    display: inline-block;
+    padding: 10px 20px; /* Add padding for a button-like appearance */
+    font-size: 1rem; /* Text size for the link */
+    color: #fff; /* White text */
+    background-color: #007bff; /* Blue background */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the login link */
+#logout_form .login_link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+

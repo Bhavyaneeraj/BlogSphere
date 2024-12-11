@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+My blog
+{% endblock %}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'sub_blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="image-container">
+    <img class="my-image" src="{% static "images/passportphoto.JPG" %}" alt="Author's Image"/>
+    <h1 id='welcome-heading'>WELCOME TO NEERAJ'S BLOG</h1>
+</div>
+<p id="none">Helloooo.... Everyone This is neeraj and i love to blog about environement</p>
+<div id="index">
+    <h2>My Thoughts</h2>
+    {%for i in posts%}
+    {%include "sub_blog/includes/header.html"%}
+    {%endfor%}
+</div>
+{%include 'sub_blog/includes/footer.html'%}
+{% endblock %}
